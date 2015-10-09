@@ -1,0 +1,10 @@
+<h1> I love dogs! </h1>
+
+<h3> This is all the dogs in the database. </h3>
+
+<% @dogs.each do |u| %> <!-- Iterates through each user under the variable u -->
+  Name: <p> <%= link_to u.name, dogs_path(u) %> </p> <!-- Show the users name-->
+  Age : <p> <%= u.age %> </p> <!-- Show the users email -->
+<% end %>
+
+<%= link_to "new", dogs_new_path %>
